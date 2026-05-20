@@ -25,4 +25,4 @@
 
 | 功能設定主介面 | 速度與字體調整 | 豐富色彩選擇 |
 | :---: | :---: | :---: |
-| ![主介面](feature_marquee_1.png) | ![主介面 2 ](feature_marquee_2.png) | ![儲存頁面](function_save_preset.png) | ![設定頁面](page_app_settings.png)
+| ![主介面](screenshots/feature_marquee_1.png) | ![主介面 2 ](screenshots/feature_marquee_2.png) | ![儲存頁面](screenshots/function_save_preset.png) | ![設定頁面](screenshots/page_app_settings.png)
