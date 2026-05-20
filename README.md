@@ -23,6 +23,6 @@
 
 > **💡 使用提示**：建議在專案根目錄建立一個 `screenshots` 資料夾，把剛剛的截圖丟進去，並把下方的檔名換成你的圖片檔名，這樣 GitHub 頁面就會直接秀出你的 App 畫面囉！
 
-| 功能設定主介面 | 速度與字體調整 | 豐富色彩選擇 |
-| :---: | :---: | :---: |
-| ![主介面](screenshots/feature_marquee_1.png) | ![主介面 2 ](screenshots/feature_marquee_2.png) | ![儲存頁面](screenshots/function_save_preset.png) | ![設定頁面](screenshots/page_app_settings.png)
+| 功能設定主介面 | 功能設定主介面 2 | 儲存頁面 | 設定頁面 | 
+| :---: | :---: | :---: | :---: |
+| ![主介面](screenshots/feature_marquee_1.png) | ![主介面 2 ](screenshots/feature_marquee_2.png) | ![儲存頁面](screenshots/function_save_preset.png) | ![設定頁面](screenshots/page_app_settings.png) |
