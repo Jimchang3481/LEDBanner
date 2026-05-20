@@ -1,4 +1,4 @@
-package swifties.ticker.mindnight.ui.theme
+package com.zjys.marquee.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme

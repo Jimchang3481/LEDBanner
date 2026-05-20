@@ -1,4 +1,4 @@
-package swifties.ticker.mindnight
+package swifties.ticker.marquee
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

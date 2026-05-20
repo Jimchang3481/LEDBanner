@@ -1,4 +1,4 @@
-package swifties.ticker.mindnight.ui.theme
+package com.zjys.marquee.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

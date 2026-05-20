@@ -1,4 +1,4 @@
-package swifties.ticker.mindnight
+package com.zjys.marquee
 
 import android.annotation.SuppressLint
 import android.app.Application
@@ -91,6 +91,7 @@ import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.Stroke
@@ -104,7 +105,6 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Constraints
@@ -123,7 +123,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import org.json.JSONArray
 import org.json.JSONObject
-import swifties.ticker.mindnight.ui.theme.跑馬燈Theme
+import com.zjys.marquee.theme.跑馬燈Theme
 
 
 // --- Data Structures ---
@@ -1068,7 +1068,7 @@ fun ColorPickerDialog(
                         drawRect(
                             color = Color.White,
                             topLeft = Offset(selX - 2.dp.toPx(), 0f),
-                            size = androidx.compose.ui.geometry.Size(4.dp.toPx(), size.height),
+                            size = Size(4.dp.toPx(), size.height),
                             style = Stroke(width = 2.dp.toPx())
                         )
                     }

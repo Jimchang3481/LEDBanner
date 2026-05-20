@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "swifties.ticker.mindnight"
+    namespace = "com.zjys.marquee"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "swifties.ticker.mindnight"
+        applicationId = "com.zjys.marquee"
         minSdk = 29
         targetSdk = 36
         versionCode = 1
