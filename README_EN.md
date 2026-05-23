@@ -1,4 +1,4 @@
-# Marquee App - Open Source Android Marquee
+# LED Banner
 
 
 
@@ -10,7 +10,7 @@ A modern marquee application developed for the Android platform using **Kotlin**
 
 
 
-This application provides comprehensive customization options for your marquee, allowing users to create dynamic text tailored for various scenarios (e.g., concert cheering, event announcements):
+This application provides comprehensive customization options for your LED Banner, allowing users to create dynamic text tailored for various scenarios (e.g., concert cheering, event announcements):
 
 
 
