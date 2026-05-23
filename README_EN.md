@@ -2,7 +2,7 @@
 
 
 
-A modern marquee application developed for the Android platform using \*\*Kotlin\*\* and \*\*Jetpack Compose\*\*. This project offers highly customizable dynamic text effects with an intuitive UI interface.
+A modern marquee application developed for the Android platform using **Kotlin** and **Jetpack Compose**. This project offers highly customizable dynamic text effects with an intuitive UI interface.
 
 
 
@@ -31,6 +31,7 @@ This application provides comprehensive customization options for your marquee, 
 
 
 * **Language**: Kotlin
+  
 * **UI Framework**: Jetpack Compose
 
 
