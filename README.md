@@ -1,5 +1,5 @@
 <p align="center">
-<img width="200" src="https://github.com/Jimchang3481/MarqueeApp/screenshots/appiconappicon.png">
+<img width="200" src="[https://github.com/Jimchang3481/MarqueeApp/screenshots/appiconappicon.png](https://github.com/Jimchang3481/MarqueeApp/blob/master/screenshots/appicon/appicon.png)">
 </p>
 <h1 align="center">Marquee App 開源 Android 跑馬燈</h1>
 <h2 align="center">一個基於 Android 平台、使用 Kotlin 與 Jetpack Compose 開發的現代化跑馬燈應用程式。本專案具備高度客製化的文字動態效果與直覺的 UI 操作介面。</h2>
