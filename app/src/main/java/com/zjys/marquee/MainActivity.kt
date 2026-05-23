@@ -123,7 +123,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import org.json.JSONArray
 import org.json.JSONObject
-import com.zjys.marquee.theme.跑馬燈Theme
+import com.zjys.marquee.theme.MarqueeTheme
 
 data class FontOption(
     val name: String,
@@ -358,14 +358,7 @@ class MarqueeViewModel(application: Application) : AndroidViewModel(application)
                 is MarqueeEvent.ToggleDeleteConfirmation -> state.copy(showDeleteConfirmation = event.enabled)
                 is MarqueeEvent.ToggleDynamicColors -> state.copy(useDynamicColors = event.enabled)
                 is MarqueeEvent.UpdateCustomThemeColor -> {
-                    val rawColor = event.color
-                    val safeColor =if (state.speedLevel in 0..5) {
-                        Color(0xFF6750A4)
-                    } else {
-                        rawColor
-                    }
-
-                    state.copy(customThemeColor = safeColor)
+                    state.copy(customThemeColor = event.color)
                 }
 // ------------------------------------
             }
@@ -388,7 +381,7 @@ class MainActivity : ComponentActivity() {
                 AppTheme.SYSTEM -> isSystemInDarkTheme()
             }
 
-            跑馬燈Theme(
+            MarqueeTheme(
                 darkTheme = darkTheme,
                 dynamicColor = state.useDynamicColors,
                 seedColor = state.customThemeColor
