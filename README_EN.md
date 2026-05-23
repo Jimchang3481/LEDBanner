@@ -45,7 +45,7 @@ This application provides comprehensive customization options for your marquee, 
 
 # 🚀 Development Approach: AI-Assisted
 
-Developed using an \*\*AI-Assisted Development\*\* workflow. As the developer, I managed the core feature design, UI interaction logic, and system architecture, while leveraging AI tools for code construction, refactoring, and bug fixing.
+Developed using an AI-Assisted Development workflow. As the developer, I managed the core feature design, UI interaction logic, and system architecture, while leveraging AI tools for code construction, refactoring, and bug fixing.
 
 
 
