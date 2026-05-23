@@ -17,7 +17,6 @@
 
 * **開發語言**：Kotlin
 * **UI 框架**：Jetpack Compose
-* **版本控制**：Git / GitHub
 
 ## 📸 介面截圖與功能展示
 
