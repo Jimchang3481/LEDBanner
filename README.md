@@ -30,4 +30,14 @@
 * **快速建構**：在短時間內透過 AI 進行技術驗證，將核心精力聚焦於使用者體驗與功能完整性。
 * **除錯與重構**：主動審查 AI 生成之程式碼，確保符合專案架構。
 
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=jimchang3481&label=Profile%20views&color=0e75b6&style=flat" alt="jimchang3481" /> </p>
+
+<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=jimchang3481" alt="jim">3481/?username=jimchang3481" alt
+
+="jim">3481"/ p.
+<p align="left">
+<a href="https://instagram.com/jimchang_0907" <a href="https://developer.android.com" target="_blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="jimchang_0907" height="30" width="40" / > </a>
+</i> align="left"> <a href="https://developer.android.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg" alt="android;" href="https://git-scm.com/" target="_blank" <a href="https://kotlinlang.org" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" ="= 084" href="https://kotlinlang.org" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/kotlinlang/kotlin="40"/></a width="40" height="40"/></a width="40" height="40"/></a> ; src="https://github-readme-stats.vercel.app/api?username=jimchang3481&show_icons=true&locale=en" alt="jimchang3481" /></p>
+
+
 [**Read English Version**](README_EN.md)
