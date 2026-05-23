@@ -357,11 +357,9 @@ class MarqueeViewModel(application: Application) : AndroidViewModel(application)
                 is MarqueeEvent.UpdateAppTheme -> state.copy(appTheme = event.theme)
                 is MarqueeEvent.ToggleDeleteConfirmation -> state.copy(showDeleteConfirmation = event.enabled)
                 is MarqueeEvent.ToggleDynamicColors -> state.copy(useDynamicColors = event.enabled)
-                is MarqueeEvent.UpdateCustomThemeColor -> state.copy(customThemeColor = event.color)
                 is MarqueeEvent.UpdateCustomThemeColor -> {
                     val rawColor = event.color
-                    val luminance = ColorUtils.calculateLuminance(rawColor.toArgb())
-                    val safeColor = if (luminance < 0.1f || luminance > 0.9f) {
+                    val safeColor =if (state.speedLevel in 0..5) {
                         Color(0xFF6750A4)
                     } else {
                         rawColor
@@ -1118,13 +1116,6 @@ fun FullscreenMarquee(state: MarqueeUiState, onDismiss: () -> Unit) {
             blinkSpeedLevel = state.blinkSpeedLevel,
             modifier = Modifier.fillMaxWidth()
         )
-    }
-}
-
-@Composable
-fun PlaceholderScreen(title: String) {
-    Box(Modifier.fillMaxSize(), Alignment.Center) {
-        Text(title, style = MaterialTheme.typography.headlineMedium)
     }
 }
 
