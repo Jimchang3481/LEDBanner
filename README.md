@@ -31,9 +31,5 @@
 * **提示詞工程應用**：將 Compose 狀態管理拆解為具體邏輯需求，透過高準度提示詞引導 AI 生成 UI 程式碼。
 * **快速建構**：在短時間內透過 AI 進行技術驗證，將核心精力聚焦於使用者體驗與功能完整性。
 * **除錯與重構**：主動審查 AI 生成之程式碼，確保符合專案架構。
-
-## 🌐 社群媒體:
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/jimchang_0907) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:jim980907@gmail.com) 
-
-
+ 
 [**Read English Version**](README_EN.md)
