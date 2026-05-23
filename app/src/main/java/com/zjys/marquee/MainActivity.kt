@@ -125,8 +125,6 @@ import org.json.JSONArray
 import org.json.JSONObject
 import com.zjys.marquee.theme.跑馬燈Theme
 
-
-// --- Data Structures ---
 data class FontOption(
     val name: String,
     val family: FontFamily,
@@ -145,13 +143,11 @@ enum class AppTheme(val label: String) {
     LIGHT("淺色"), DARK("深色"), SYSTEM("跟隨系統")
 }
 
-// --- Global Constants ---
 private val FontSizes = listOf(24.sp, 36.sp, 48.sp, 64.sp, 80.sp)
 private val FontWeightOptions = listOf(
     FontWeightOption("正常", FontWeight.W400),
     FontWeightOption("粗", FontWeight.W700)
 )
-// basicMarquee 接收的是 Velocity，值越小越慢，這裡我們定義每秒跑多少 dp
 private val MarqueeSpeeds = listOf(30.dp, 60.dp, 100.dp, 150.dp, 250.dp)
 private val PresetColors = listOf(
     Color.White, Color(0xFFFFEB3B), Color(0xFFFF9800), Color(0xFF4CAF50),
@@ -163,8 +159,6 @@ private val PresetColors = listOf(
 val fontOptionsList = listOf(
     FontOption("黑體", FontFamily.Default),
 )
-
-// --- Architecture: UiState & Events ---
 data class MarqueeUiState(
     val inputText: String = "在此輸入文字",
     val fontSizeLevel: Int = 2,
@@ -366,13 +360,9 @@ class MarqueeViewModel(application: Application) : AndroidViewModel(application)
                 is MarqueeEvent.UpdateCustomThemeColor -> state.copy(customThemeColor = event.color)
                 is MarqueeEvent.UpdateCustomThemeColor -> {
                     val rawColor = event.color
-                    // 計算顏色的亮度 (0.0 是純黑，1.0 是純白)
                     val luminance = ColorUtils.calculateLuminance(rawColor.toArgb())
-
-                    // 🔥 最強防護網：不管深色淺色模式，只要你選的顏色太黑(<0.1)或太白(>0.9)
-                    // 我們就強制把你拉回預設的紫色，保護 App 不會瞎掉
                     val safeColor = if (luminance < 0.1f || luminance > 0.9f) {
-                        Color(0xFF6750A4) // 預設的紫色
+                        Color(0xFF6750A4)
                     } else {
                         rawColor
                     }
@@ -386,8 +376,6 @@ class MarqueeViewModel(application: Application) : AndroidViewModel(application)
         }
     }
 }
-
-// --- Main Activity ---
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -416,19 +404,11 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun MarqueeApp(viewModel: MarqueeViewModel) {
     val state by viewModel.uiState.collectAsStateWithLifecycle()
-
-    // 🔥 終極修正：放棄 primaryContainer，全部強制使用 primary
     val myCustomItemColors = NavigationSuiteDefaults.itemColors(
         navigationBarItemColors = NavigationBarItemDefaults.colors(
-            // 1. 背景改用 primary (藍色)，加上 20% 的透明度，這樣視覺上會有很高級的果凍感
             indicatorColor = MaterialTheme.colorScheme.primary.copy(alpha = 0.2f),
-
-            // 2. 裡面的圖示也強制變成藍色
             selectedIconColor = MaterialTheme.colorScheme.primary,
-
-            // 3. 文字一樣維持藍色
             selectedTextColor = MaterialTheme.colorScheme.primary,
-
             unselectedIconColor = MaterialTheme.colorScheme.onSurfaceVariant,
             unselectedTextColor = MaterialTheme.colorScheme.onSurfaceVariant
         )
@@ -448,7 +428,6 @@ fun MarqueeApp(viewModel: MarqueeViewModel) {
                         label = { Text(dest.label) },
                         selected = dest == state.currentDestination,
                         onClick = { viewModel.onEvent(MarqueeEvent.Navigate(dest)) },
-                        // 直接把剛剛算好的顏色變數傳進來
                         colors = myCustomItemColors
                     )
                 }
@@ -499,7 +478,7 @@ fun SettingsScreen(state: MarqueeUiState, onEvent: (MarqueeEvent) -> Unit) {
                         ) {
                             RadioButton(
                                 selected = state.appTheme == theme,
-                                onClick = null // handled by selectable Row
+                                onClick = null
                             )
                             Text(
                                 text = theme.label,
@@ -671,8 +650,6 @@ fun SavedItemCard(item: MarqueeSaveItem, onApply: () -> Unit, onDelete: () -> Un
         }
     }
 }
-
-// 核心優化：使用 SubcomposeLayout 進行無限寬度測量，徹底解決截斷問題
 @SuppressLint("UnusedBoxWithConstraintsScope")
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
@@ -685,7 +662,6 @@ fun NativeMarqueeText(
     blinkSpeedLevel: Int,
     modifier: Modifier = Modifier
 ) {
-    // --- 閃爍邏輯 ---
     val alpha by if (isBlinking) {
         val duration = listOf(1000, 750, 500, 300, 150)[blinkSpeedLevel]
         val infiniteTransition = rememberInfiniteTransition(label = "BlinkTransition")
@@ -711,22 +687,18 @@ fun NativeMarqueeText(
             .clipToBounds()
             .alpha(alpha)
     ) { constraints ->
-        // 1. 【核心修復】：使用無限大的寬度 Constraints() 進行子組件測量，確保文字永不截斷
         val textPlaceable = subcompose("measure") {
             Text(text = text, style = style, maxLines = 1, softWrap = false)
         }.first().measure(Constraints())
 
         val textWidthPx = textPlaceable.width.toFloat()
         val containerWidthPx = constraints.maxWidth.toFloat()
-        
-        // 2. 佈局內容：根據測量出的真實寬度建立雙軌道
         val contentPlaceable = subcompose("content") {
             if (textWidthPx > 0f && velocityPx > 0f) {
-                // 如果文字寬度小於螢幕，我們讓它至少跑完一個螢幕寬度，避免太快消失或接得太生硬
                 val effectiveSpacingPx = if (textWidthPx < containerWidthPx) {
-                    containerWidthPx // 短文字使用螢幕寬度作為間隔，確保完整進出
+                    containerWidthPx
                 } else {
-                    spacingPx // 長文字維持小間隔
+                    spacingPx
                 }
                 
                 val segmentWidthPx = textWidthPx + effectiveSpacingPx
@@ -755,16 +727,13 @@ fun NativeMarqueeText(
                     modifier = Modifier.graphicsLayer { translationX = offsetPx },
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    // Track A
                     Text(text = text, style = style, maxLines = 1, softWrap = false)
                     Spacer(modifier = Modifier.layout { measurable, _ ->
-                        // 動態間隔
                         val placeable = measurable.measure(Constraints.fixedWidth(effectiveSpacingPx.toInt()))
                         layout(placeable.width, placeable.height) {
                             placeable.placeRelative(0, 0)
                         }
                     })
-                    // Track B
                     Text(text = text, style = style, maxLines = 1, softWrap = false)
                     Spacer(modifier = Modifier.layout { measurable, _ ->
                         val placeable = measurable.measure(Constraints.fixedWidth(effectiveSpacingPx.toInt()))
@@ -893,8 +862,6 @@ fun MarqueeSettingsScreen(
         }
 
         SmoothSliderSetting(title = "滾動速度", level = state.speedLevel) { onEvent(MarqueeEvent.UpdateSpeed(it)) }
-
-        // 捲動方向
         Column {
             Text("捲動方向", style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.primary)
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(top = 8.dp)) {
@@ -907,8 +874,6 @@ fun MarqueeSettingsScreen(
                 }
             }
         }
-
-        // 文字閃爍
         Column {
             Row(Modifier.fillMaxWidth(), Arrangement.SpaceBetween, Alignment.CenterVertically) {
                 Text("文字閃爍", style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.primary)
@@ -919,8 +884,6 @@ fun MarqueeSettingsScreen(
                 SmoothSliderSetting(title = "閃爍速度", level = state.blinkSpeedLevel) { onEvent(MarqueeEvent.UpdateBlinkSpeed(it)) }
             }
         }
-
-        // 顏色設定
         Column {
             Text("顏色設定", style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.primary)
             var showColorPicker by remember { mutableStateOf(false) }
@@ -974,8 +937,6 @@ fun MarqueeSettingsScreen(
         Spacer(modifier = Modifier.height(32.dp))
     }
 }
-
-// ColorPickerDialog 保持不變，因為這部分封裝得還行，主要是把狀態提升了。
 @Composable
 fun ColorPickerDialog(
     initialColor: Color,
@@ -993,7 +954,6 @@ fun ColorPickerDialog(
         title = { Text("選擇顏色") },
         text = {
             Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
-                // 飽和度與明度區塊
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -1036,8 +996,6 @@ fun ColorPickerDialog(
                         )
                     }
                 }
-
-                // 色相區塊
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -1073,8 +1031,6 @@ fun ColorPickerDialog(
                         )
                     }
                 }
-
-                // 預覽區塊
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(8.dp)
@@ -1152,11 +1108,10 @@ fun FullscreenMarquee(state: MarqueeUiState, onDismiss: () -> Unit) {
             text = state.inputText,
             style = TextStyle(
                 color = state.selectedColor,
-                fontSize = FontSizes[state.fontSizeLevel] * 2, // 字體放大了兩倍
+                fontSize = FontSizes[state.fontSizeLevel] * 2,
                 fontFamily = state.currentFont.family,
                 fontWeight = state.currentWeight
             ),
-            // 🔥 核心修正：全螢幕字體放大兩倍，移動距離必須乘兩倍，視覺上才會是一樣的檔位速度！
             velocity = MarqueeSpeeds[state.speedLevel] * 2,
             direction = state.direction,
             isBlinking = state.isBlinking,
