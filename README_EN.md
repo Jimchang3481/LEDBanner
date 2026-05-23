@@ -39,7 +39,6 @@ This application provides comprehensive customization options for your marquee, 
 | Main Dashboard | Dashboard 2 | Save Presets | App Settings |  
 | :---: | :---: | :---: | :---: |
 | ![Main](screenshots/feature_marquee_1.png) | ![Main2](screenshots/feature_marquee_2.png) | ![Save](screenshots/function_save_preset.png) | ![Settings](screenshots/page_app_settings.png) |
-
 # 🚀 Development Approach: AI-Assisted
 
 Developed using an AI-Assisted Development workflow. As the developer, I managed the core feature design, UI interaction logic, and system architecture, while leveraging AI tools for code construction, refactoring, and bug fixing.
