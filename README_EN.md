@@ -41,7 +41,7 @@ This application provides comprehensive customization options for your marquee, 
 
 | Main Dashboard | Dashboard 2 | Save Presets | App Settings | 
 | :---: | :---: | :---: | :---: |
-| ![Main](screenshots/feature_marquee_1.png) | ![Main 2 ](screenshots/feature_marquee_2.png) | ![Save](screenshots/function_save_preset.png) | ![Settings](screenshots/page_app_settings.png) |
+| ![Main](screenshots/feature_marquee_1.png) | ![Main2](screenshots/feature_marquee_2.png) | ![Save](screenshots/function_save_preset.png) | ![Settings](screenshots/page_app_settings.png) |
 
 # 🚀 Development Approach: AI-Assisted
 
@@ -49,13 +49,13 @@ Developed using an \*\*AI-Assisted Development\*\* workflow. As the developer, I
 
 
 
-\*\*Prompt Engineering\*\*: Decomposed Compose state management into specific logic requirements, using high-precision prompts to guide AI in generating UI code.
+* **Prompt Engineering**: Decomposed Compose state management into specific logic requirements, using high-precision prompts to guide AI in generating UI code.
 
-\*\*Rapid Prototyping\*\*: Utilized AI for rapid technical validation, allowing me to focus on user experience and feature completeness.
+* **Rapid Prototyping**: Utilized AI for rapid technical validation, allowing me to focus on user experience and feature completeness.
 
-\*\*Debugging \& Refactoring\*\*: Actively reviewed AI-generated code to ensure it aligns with the project's architecture and standards.
+* **Debugging & Refactoring**: Actively reviewed AI-generated code to ensure it aligns with the project's architecture and standards.
 
 
 
-\[\*\*回到繁體中文版本 (Traditional Chinese Version)\*\*](README.md)
+[**回到繁體中文版本**](README.md)
 
