@@ -2,8 +2,7 @@
 <img width="200" src="https://github.com/Jimchang3481/MarqueeApp/blob/master/screenshots/appicon/appicon.png" alt="LED Banner Logo">
 </p>
 <h1 align="center">LED Banner </h1>
-<h2 align="center">A modern marquee application developed for the Android platform using Kotlin and Jetpack Compose. This project offers highly customizable dynamic text effects with an intuitive UI interface.
-。</h2>
+<h2 align="center">A modern marquee application developed for the Android platform using Kotlin and Jetpack Compose. This project offers highly customizable dynamic text effects with an intuitive UI interface.</h2>
 
 # 📱 Key Features
 
