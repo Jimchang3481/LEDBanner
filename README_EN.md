@@ -1,14 +1,11 @@
-# LED Banner
-
-
-
-A modern marquee application developed for the Android platform using **Kotlin** and **Jetpack Compose**. This project offers highly customizable dynamic text effects with an intuitive UI interface.
-
-
+<p align="center">
+<img width="200" src="https://github.com/Jimchang3481/MarqueeApp/blob/master/screenshots/appicon/appicon.png" alt="LED Banner Logo">
+</p>
+<h1 align="center">LED Banner </h1>
+<h2 align="center">A modern marquee application developed for the Android platform using **Kotlin** and **Jetpack Compose**. This project offers highly customizable dynamic text effects with an intuitive UI interface.
+。</h2>
 
 # 📱 Key Features
-
-
 
 This application provides comprehensive customization options for your LED Banner, allowing users to create dynamic text tailored for various scenarios (e.g., concert cheering, event announcements):
 
