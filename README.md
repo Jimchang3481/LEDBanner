@@ -15,8 +15,11 @@
 
 ## 🛠️ 技術棧與架構
 
-* **開發語言**：Kotlin
+* **開發語言**：![Kotlin](https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white)
 * **UI 框架**：Jetpack Compose
+*  **版本控制 **：![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+*  ![F-Droid Version](https://img.shields.io/f-droid/v/:appId)
+
 
 ## 📸 介面截圖與功能展示
 
@@ -30,8 +33,24 @@
 * **快速建構**：在短時間內透過 AI 進行技術驗證，將核心精力聚焦於使用者體驗與功能完整性。
 * **除錯與重構**：主動審查 AI 生成之程式碼，確保符合專案架構。
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=jimchang3481&label=Profile%20views&color=0e75b6&style=flat" alt="jimchang3481" /> </p>
 
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=jimchang3481" alt="jim">3481/?username=jimchang3481" alt
+
+# 💻 Tech Stack:
+ ![Kotlin](https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white)
+# 📊 GitHub Stats:
+![](https://github-readme-stats.shion.dev/api?username=grfhr&theme=dark&hide_border=false&include_all_commits=false&count_private=false)<br/>
+![](https://streak-stats.demolab.com/?user=grfhr&theme=dark&hide_border=false)<br/>
+![](https://github-readme-stats.shion.dev/api/top-langs/?username=grfhr&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
+
+---
+[![](https://komarev.com/ghpvc/?username=grfhr&icon=0&color=0)](https://visitcount.itsvg.in)
+
+<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+
+## 🌐 Socials:
+[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/jimchang_0907) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:jim980907@gmail.com) 
+
+# 💻 Tech Stack:
+![Kotlin](https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white)
 
 [**Read English Version**](README_EN.md)
