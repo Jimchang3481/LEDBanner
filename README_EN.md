@@ -38,13 +38,11 @@ This application provides comprehensive customization options for your marquee, 
 
 ## 📸 Screenshots & Feature Showcase
 
-### Main Interfaces
-![Main Dashboard](screenshots/feature_marquee_1.png)
-![Main Dashboard 2](screenshots/feature_marquee_2.png)
+### Main Dashboard
+![Main](screenshots/feature_marquee_1.png) | ![Main 2](screenshots/feature_marquee_2.png)
 
 ### Management
-![Save Presets](screenshots/function_save_preset.png)
-![App Settings](screenshots/page_app_settings.png)
+![Save](screenshots/function_save_preset.png) | ![Settings](screenshots/page_app_settings.png)
 
 
 
