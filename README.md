@@ -4,13 +4,6 @@
 <h1 align="center">Marquee App 開源 Android 跑馬燈</h1>
 <h2 align="center">一個基於 Android 平台、使用 Kotlin 與 Jetpack Compose 開發的現代化跑馬燈應用程式。本專案具備高度客製化的文字動態效果與直覺的 UI 操作介面。</h2>
 
-
-
-# Marquee App - 開源 Android 跑馬燈
-
-一個基於 Android 平台、使用 Kotlin 與 Jetpack Compose 開發的現代化跑馬燈應用程式。
-具備高度客製化的文字動態效果與直覺的 UI 操作介面。
-
 ## 📱 核心功能特色
 
 本應用程式提供全方位的跑馬燈自訂選項，讓使用者能針對不同場景（如演唱會應援、活動公告）打造專屬的動態文字：
