@@ -1,7 +1,8 @@
-# Marquee App - 開源 Android 跑馬燈
-
-一個基於 Android 平台、使用 **Kotlin** 與 **Jetpack Compose** 開發的現代化跑馬燈應用程式。
-本專案具備高度客製化的文字動態效果與直覺的 UI 操作介面。
+<p align="center">
+<img width="200" src="https://github.com/Jimchang3481/MarqueeApp/screenshots/appiconappicon.png">
+</p>
+<h1 align="center">Marquee App 開源 Android 跑馬燈</h1>
+<h2 align="center">一個基於 Android 平台、使用 Kotlin 與 Jetpack Compose 開發的現代化跑馬燈應用程式。本專案具備高度客製化的文字動態效果與直覺的 UI 操作介面。</h2>
 
 ## 📱 核心功能特色
 
@@ -15,8 +16,10 @@
 
 ## 🛠️ 技術棧與架構
 
-* **開發語言**：Kotlin
+* **開發語言**：![Kotlin](https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white)
+*  **版本控制**：![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 * **UI 框架**：Jetpack Compose
+
 
 ## 📸 介面截圖與功能展示
 
@@ -29,5 +32,5 @@
 * **提示詞工程應用**：將 Compose 狀態管理拆解為具體邏輯需求，透過高準度提示詞引導 AI 生成 UI 程式碼。
 * **快速建構**：在短時間內透過 AI 進行技術驗證，將核心精力聚焦於使用者體驗與功能完整性。
 * **除錯與重構**：主動審查 AI 生成之程式碼，確保符合專案架構。
-
+ 
 [**Read English Version**](README_EN.md)
