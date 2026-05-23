@@ -16,8 +16,8 @@
 ## 🛠️ 技術棧與架構
 
 * **開發語言**：![Kotlin](https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white)
-* **UI 框架**：Jetpack Compose
 *  **版本控制**：![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+* **UI 框架**：Jetpack Compose
 
 
 ## 📸 介面截圖與功能展示
