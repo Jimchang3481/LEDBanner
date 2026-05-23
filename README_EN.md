@@ -14,15 +14,15 @@ This application provides comprehensive customization options for your marquee, 
 
 
 
-\*\*📐 Font Customization\*\*: Real-time adjustments for font size, weight, and scrolling direction, ensuring optimal readability on all screen sizes.
+* **📐 Font Customization**: Real-time adjustments for font size, weight, and scrolling direction, ensuring optimal readability on all screen sizes.
 
-\*\*⚡ Speed Control\*\*: Easily toggle between smooth, slow, or high-speed scrolling.
+* **⚡ Speed Control**: Easily toggle between smooth, slow, or high-speed scrolling.
 
-\*\*🎨 Color Customization\*\*: Full palette support with preset options, including dynamic font color changes and text blinking effects.
+* **🎨 Color Customization**: Full palette support with preset options, including dynamic font color changes and text blinking effects.
 
-\*\*🔄 Live Preview\*\*: Instant visual feedback; any modifications (text, color, speed) are reflected in real-time.
+* **🔄 Live Preview**: Instant visual feedback; any modifications (text, color, speed) are reflected in real-time.
 
-\*\*🕹️ Preset Management\*\*: Save your favorite marquee parameter combinations (including text content and scrolling speed) to build your own personal preset list.
+* **🕹️ Preset Management**: Save your favorite marquee parameter combinations (including text content and scrolling speed) to build your own personal preset list.
 
 
 
@@ -30,9 +30,8 @@ This application provides comprehensive customization options for your marquee, 
 
 
 
-\*\*Language\*\*: Kotlin
-
-\*\*UI Framework\*\*: Jetpack Compose
+* **Language**: Kotlin
+* **UI Framework**: Jetpack Compose
 
 
 ## 📸 Screenshots & Feature Showcase
