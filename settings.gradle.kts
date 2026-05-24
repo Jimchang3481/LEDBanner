@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "跑馬燈"
+rootProject.name = "LED Banner"
 include(":app")
